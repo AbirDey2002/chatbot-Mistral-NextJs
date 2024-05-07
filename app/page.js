@@ -3,7 +3,7 @@ import { FaSearch } from "react-icons/fa";
 import ChatbotClient from "@/components/chatbotClient";
 
 const getAllChats = async (id) => {
-  const res = await fetch(`http://localhost:3000/api/chats?id=${id}`,{
+  const res = await fetch(`https://chatbot-mistral-next-js.vercel.app/api/chats?id=${id}`,{
     method: "GET", cache:"no-store"
   })
 

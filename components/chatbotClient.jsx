@@ -27,7 +27,7 @@ export default function ChatbotClient({chats, length}) {
 
     const id = "6634833a146715c965098dfd";
 
-    const res = await fetch(`http://localhost:3000/api/chats?id=${id}`,{
+    const res = await fetch(`https://chatbot-mistral-next-js.vercel.app/api/chats?id=${id}`,{
       method: "DELETE"
     });
 
@@ -46,7 +46,7 @@ export default function ChatbotClient({chats, length}) {
 
     const id = "6634833a146715c965098dfd";
 
-    const res = await fetch("http://localhost:3000/api/chats",{
+    const res = await fetch("https://chatbot-mistral-next-js.vercel.app/api/chats",{
       method: "PUT",
       headers: {
         "Content-Type":"application/json"
@@ -62,7 +62,7 @@ export default function ChatbotClient({chats, length}) {
     router.refresh();
     setLoading(true);
 
-    const bot = await fetch("http://localhost:3000/api/generate-text",{
+    const bot = await fetch("https://chatbot-mistral-next-js.vercel.app/api/generate-text",{
       method: "POST",
       headers: {
         "Content-Type":"application/json"
@@ -74,7 +74,7 @@ export default function ChatbotClient({chats, length}) {
     const bot_text = textData[0].generated_text;
     console.log(bot_text);
 
-    const resBot = await fetch("http://localhost:3000/api/chats",{
+    const resBot = await fetch("https://chatbot-mistral-next-js.vercel.app/api/chats",{
       method: "PUT",
       headers: {
         "Content-Type":"application/json"
