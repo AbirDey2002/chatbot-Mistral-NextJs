@@ -1,14 +1,3 @@
-// import Image from "next/image";
-// import { FaSearch } from "react-icons/fa";
-
-// export default function Home() {
-
-//   return (
-//     <div>Hello</div>
-//   );
-// }
-
-
 import Image from "next/image";
 import { FaSearch } from "react-icons/fa";
 import ChatbotClient from "@/components/chatbotClient";
@@ -29,21 +18,6 @@ const getAllChats = async (id) => {
 export default async function Chatbot() {
 
   const id = "6634833a146715c965098dfd";
-
-  // const chats = [
-  //   {
-  //     display: "Hello",
-  //     type: 1
-  //   },
-  //   {
-  //     display: "How are you?",
-  //     type: 2
-  //   },
-  //   {
-  //     display: "i'm fine how bout yout",
-  //     type: 1
-  //   }
-  // ];
 
   const chats = await getAllChats(id);
   const length = Object.keys(chats).length;
